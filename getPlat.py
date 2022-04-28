@@ -14,6 +14,7 @@ import argparse
 explanation = 'This program runs RIAA datascraping for all awards except Gold.'
 parser = argparse.ArgumentParser(description=explanation)
 parser.add_argument("-s", "--servicefile", help="file for chromeDriver", required=True)
+parser.add_argument("-f", "--firefox", help="action chooses firefox driver", action='store_true')
 parser.add_argument("-o", "--outputfile", help="output file for csv")
 args = parser.parse_args()
 filepath = args.outputfile
@@ -22,7 +23,10 @@ if not filepath:
 servicefile = args.servicefile
 #Driver allows selenium to grab data from site
 driverService = Service(servicefile)
-driver = webdriver.Chrome(service=driverService)
+if args.firefox:
+    driver = webdriver.Firefox(service=driverService)
+else:
+    driver = webdriver.Chrome(service=driverService)
 PATIENCE_TIME = 60
 
 # go to specific site -- this starts at the very beginning, before the first
