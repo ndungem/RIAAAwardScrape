@@ -27,6 +27,8 @@ HOW TO RUN:
                         is left out, it will go to a default path (riaaAwards.csv).
      —servicefile (-s): this flag is the WebDriver service path mentioned in the
                         prerequisites. This is required.
+     -firefox (-f): this flag indicates if you are using a Firefox driver. If left
+     		    out, it will switch to Chrome as default.
   ```
   There are two ways to run the data scraping process:
   
