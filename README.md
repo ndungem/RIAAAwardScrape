@@ -39,7 +39,7 @@ HOW TO RUN:
         EXAMPLE:
 	
    ```
-            riaaDataScrape.py -a mplat -o <outputFile.csv> -s <serviceFilePath>
+            python3 riaaDataScrape.py -a mplat -o <outputFile.csv> -s <serviceFilePath>
    ```
    * Run Gold first, then the rest of the awards. This will still use the -a
     flag for gold  — however, without the -a flag, it will run multi-platinum,
@@ -47,7 +47,7 @@ HOW TO RUN:
     has been partially tested, only because it will take very long to run.
       EXAMPLE:
    ```
-          riaaDataScrape.py -o <outputFile.csv> -s <serviceFilePath>
+          python3 riaaDataScrape.py -o <outputFile.csv> -s <serviceFilePath>
    ```
 AFTER IT RUNS:
   When you want to open the CSV file, you have to open it in a text editor
